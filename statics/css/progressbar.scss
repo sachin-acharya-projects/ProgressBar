@@ -1,0 +1,82 @@
+:root {
+    --white-070: rgba(255, 255, 255, 0.7);
+    --white-188: rgb(188, 188, 188);
+    --white-232: rgb(233, 232, 233);
+    --white-255: #FFFFFF;
+
+    --black-0: #000000;
+    --black-38: rgb(38, 41, 47);
+    --black-025: rgba(50, 50, 93, 0.25);
+    --black-030: rgba(0, 0, 0, 0.3);
+
+    --green-242: rgb(19, 242, 135);
+}
+
+body {
+    background-color: var(--white-232);
+}
+
+.progress {
+    width: 400px;
+    height: 400px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--black-38);
+
+    border-radius: 2mm;
+    box-shadow: var(--black-025) 0px 13px 27px -5px,
+        var(--black-030) 0px 8px 16px -8px;
+}
+
+.spikes {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spike {
+    display: block;
+    position: absolute;
+    background: linear-gradient(var(--white-070) 60%, var(--black-38));
+    border-radius: 0.5mm;
+    width: 2px;
+    height: 35px;
+    margin: 0 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top;
+}
+
+.percentage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: var(--white-255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.label {
+    font-size: 12px;
+    color: var(--white-188);
+}
+
+.active {
+    height: 60px;
+    background: linear-gradient(
+        var(--green-242) 60%,
+        var(--black-38)
+    );
+    transition: 0.25s ease-out;
+}
